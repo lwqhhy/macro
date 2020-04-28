@@ -9,10 +9,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World 2 !'
+    return 'Hello World 3 !'
 
 def get_dbmysql():
-    db = pymysql.connect('47.93.58.66', 'root', 'yadan', 'collect_db', charset="utf8")
+    db = pymysql.connect('localhost', 'root', 'root', 'collect_db', charset="utf8")
     return db
 
 #查询mysql带字段名返回
