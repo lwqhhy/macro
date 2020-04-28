@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return 'Hello World 2 !'
 
 def get_dbmysql():
     db = pymysql.connect('localhost', 'root', 'yadan', 'collect_db', charset="utf8")
