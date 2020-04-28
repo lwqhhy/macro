@@ -7,6 +7,10 @@ import datetime
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
 def get_dbmysql():
     db = pymysql.connect('localhost', 'root', 'yadan', 'collect_db', charset="utf8")
     return db
@@ -66,5 +70,5 @@ class DecimalEncoder(json.JSONEncoder):
             return o.strftime("%Y-%m-%d")
         super(DecimalEncoder, self).default(o)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(host='0.0.0.0',port=8080)
