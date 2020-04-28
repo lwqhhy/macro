@@ -29,6 +29,12 @@ def query_dbmysql(query, args=(), one=False):
     rv = cur.fetchall()
     db.close()
     return (rv[0] if rv else None) if one else rv
+#测试接口
+@app.route("/HELLO", methods=["GET"])
+def GET_HELLO():
+    if request.method == "GET":
+      result = "{'code':0,'msg':'执行成功'}"
+    return result
 
 #POST接口获取指定日期的宏观控制图点数据
 @app.route("/MACRO_CHART", methods=["POST"])
